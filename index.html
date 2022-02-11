@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html> 
+
+<html>
 
 <head>
     <meta charset=utf-8/>
 </head>
 
-
 <body>
 
-    <h1>ic-07 - Intro to JavaScript</h1>
+<h1>ic-07 - Intro to JavaScript</h1>
 
-    <button type="button">Button 1</button>
+<button type="button" onclick="document.getElementById('random_num').innerHTML = getRndInteger(0,10)">Random Number</button>
 
-    <div id="random_num">
-        When Button 1 is clicked, a random number should appear here. 
-    </div>
+<button type="button" onclick="circle.style.fill='green';">Change Color</button>
+
+<div id="random_num">
+When Button 1 is clicked, a random number should appear here.
+</div>
+
+<div class="color_change">
+<svg id="svg" width="1000" height="1000" style="width: 3.5in; height: 1in">
+  <circle id="circle" r="30" cx="34" cy="34"
+            style="fill: blue"/>
+</svg>
+</div>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
 
 </body>
-
 </html>
